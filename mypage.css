@@ -1,0 +1,301 @@
+html{
+	background-image: linear-gradient(180deg, white, black);
+}
+
+em{
+	background-color: red ;
+	position:-webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+
+
+/* header */
+h1,h2,h3,h4,h5,h6{
+	background-color:black ;
+	font-family: complex;
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
+	background-color: white ; 
+}
+
+
+
+/* center part*/
+.center{
+	margin-right: auto;
+	margin-left: auto;
+	width: 10px;
+	height: 10px;
+
+}
+
+.one{
+	position:-webkit-sticky;
+	position: sticky;
+	top: 0;
+	font-family: ITC Kable Std;
+	margin-left: 400px;
+	width: 10px;
+	height: 10px;
+}
+
+.shiftOne{
+	position:relative;
+}
+
+.one{
+	display: block;
+	width: auto;
+	height: auto;
+}
+
+.overlayImg{
+	position: absolute;
+	margin-left: 400px;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	height: 10%;
+	width: 150%;
+	opacity: 0;
+}
+
+.overlayImgS{
+	position: absolute;
+	margin-right: 50px;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	height: 10px;
+	width: 12px;
+	opacity: 0;
+	transition: 1.3s ease;
+}
+
+.shiftOne:hover .overlayImg{
+	opacity: 1;
+	animation: turn 3s ;
+}
+
+@keyframes turn{
+	from {width: 100px; height: 10px;}
+	to {width: 100px ; height: 1000px;}
+}
+
+.shiftOne:hover .overlayImgS{
+	opacity: 1;
+	height: 1000px;
+	width: 1200px;
+}
+
+.shiftOne:hover .one{
+	opacity: 0;
+}
+
+.two{
+	font-family: ITC Kable Std;
+	margin-left: 100px;
+	margin-top: 50px;
+	width: 8px;
+	height: 8px;
+	background-color: red;
+	opacity: 0;
+	transition: 1s ease;
+}
+
+.two:hover{
+	opacity: 1;
+}
+
+.three{
+	font-family: ITC Kable Std;
+	margin-left: 230px;
+	margin-top: 400px;
+	width: 5px;
+	height: 5px;
+	background-color: white;
+}
+
+.four{
+	font-family: ITC Kable Std;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
+	margin-top: 250px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 3px;
+	height: 3px;
+	background-color: red;
+}
+
+.five{
+	font-family: ITC Kable Std;
+	font-size: 5px;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
+	margin-top: 220px;
+	width: 3px;
+	height: 3px;
+	background-color: red;
+}
+
+.one:hover, .two:hover, .three:hover, .four:hover, .five:hover{
+	background-color: grey;
+}
+
+a:link, a:visited, a:active{
+	text-decoration: none;
+	color: black;
+
+}
+
+a:hover{
+	text-decoration: none;
+	color: red;
+	font-size: 120px;
+}
+
+
+
+/* left part */
+.left{
+	width: 10px;
+	height: 1000px;
+	position: relative;
+	animation: move1 10s infinite;
+}
+
+@keyframes move1{
+	0% {transform: rotate(0deg); opacity: .3;}
+	25% {transform: rotate(90deg);opacity: 1;}
+	50% {transform: rotate(270deg);opacity: .6;}
+	100% {transform: rotate(360deg);opacity: 0;}
+}
+
+
+
+/* right part */
+.right{
+	margin-left: auto;
+	margin-top: auto;
+	width: 5px;
+	height: 1000px;
+	animation: move2 10s infinite;
+}
+
+@keyframes move2{
+	0% {transform: rotate(0deg);opacity: 1;}
+	100% {transform: rotate(-360deg);opacity: 0;}
+}
+
+#smaller{
+	font-size: 10px;
+}
+
+
+
+/* bottom part */
+img{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.container{
+	position: relative;
+
+}
+
+.six{
+	display: block;
+	width: 100%;
+	height: auto;
+	box-shadow: 0 4px 8px 0 red;
+
+}
+
+.textimg{
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+}
+
+.container:hover .six{
+	transform: 180deg;
+}
+
+.container:hover .textimg{
+	opacity: 1;
+
+}
+
+
+/*html{
+	background-image: linear-gradient(180deg, #04879c, #0c3c78, #090030, #f30a49);
+}
+
+	0% {transform: rotate(0deg);}
+	5% {transform: rotate(5deg);}
+	15% {transform: rotate(0deg);}
+	20% {transform: rotate(15deg);}
+	25% {transform: rotate(5deg);}
+	30% {transform: rotate(25deg);}
+	35% {transform: rotate(15deg);}
+	40% {transform: rotate(35deg);}
+	45% {transform: rotate(25deg);}
+	50% {transform: rotate(45deg);}
+	55% {transform: rotate(35deg);}
+	60% {transform: rotate(55deg);}
+	65% {transform: rotate(45deg);}
+	70% {transform: rotate(65deg);}
+	75% {transform: rotate(55deg);}
+	80% {transform: rotate(75deg);}
+	85% {transform: rotate(65deg);}
+	90% {transform: rotate(85deg);}
+	95% {transform: rotate(75deg);}
+	100% {transform: rotate(90deg);}
+}
+
+img{
+	width: 10px;
+	height:100px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	transform: rotate(-20deg);
+}
+
+.center{
+	display: inline-block;
+}
+
+.center+.centeri{
+	margin-right: auto;
+	margin-left: auto;
+	width: 50%;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	
+}
+
+.center:hover+.centeri{
+	display: inline;
+}
