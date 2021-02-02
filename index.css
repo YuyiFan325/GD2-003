@@ -37,6 +37,7 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 	position: sticky;
 	top: 0;
 	font-family: ITC Kable Std;
+	font-weight: normal;
 	margin-left: 400px;
 	width: 10px;
 	height: 10px;
@@ -73,6 +74,7 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 	left:0;
 	height: 10px;
 	width: 12px;
+	transform: scaleY(1.5);
 	opacity: 0;
 	transition: 1.3s ease;
 }
@@ -105,7 +107,7 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 	height: 8px;
 	background-color: red;
 	opacity: 0;
-	transition: 1s ease;
+	transition: .3s ease;
 }
 
 .two:hover{
@@ -232,7 +234,7 @@ img{
 	height: 100%;
 	width: 100%;
 	opacity: 0;
-	transition: .5s ease;
+	transition: .3s ease;
 }
 
 .container:hover .six{
@@ -241,8 +243,8 @@ img{
 
 .container:hover .textimg{
 	opacity: 1;
-	height: 1000%;
-	width: 1000%;
+	height: 100%;
+	width: 100%;
 
 }
 
