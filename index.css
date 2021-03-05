@@ -1,10 +1,10 @@
 html{
-	background-image: linear-gradient(180deg, white, black);
+	background-image: #FFF;
 	background-size: 120rem 470rem;
 }
 
 em{
-	background-color: red ;
+	background-color: #e97171;
 	position:-webkit-sticky;
 	position: sticky;
 	top: 0;
@@ -48,14 +48,23 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 	display:grid;
 	grid-template-columns: repeat(7, 20%);
 	grid-template-rows: repeat(6, 70%);
+	transform: rotate(90deg);
+	top: 400px;
+	left: 1000px;
+}
+
+.center:hover{
+	transform: rotate(90deg);
 }
 
 .one{
 	display: inline;
 	font-family: complex;
 	font-size: 86px;
-	background-color: red;
-
+	background-color: #e97171;
+	padding: 20px;
+	border-radius: 55px;
+	box-shadow: 5px 5px 10px red;
 }
 
 .shiftOne{
@@ -179,7 +188,7 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 .two{
 	display: inline;
 	font-family: complex;
-	font-size: 2em;
+	font-size: 2.1em;
 	margin: auto;
 	background-color: transparent;
 	color: transparent;
@@ -234,7 +243,7 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 	grid-column-end: 8;
 	grid-row-start: 4;
 	grid-row-end: 8;
-	font-size: 2em;
+	font-size: 2.4em;
 	background-color: transparent;
 	color: transparent;
 }
@@ -280,6 +289,7 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 	opacity: 0;
 	margin-left: auto;
 	transition: .1s ease;
+	padding-top: 35px;
 }
 
 .one:hover, .two:hover, .three:hover, .four:hover, .five:hover{
@@ -287,14 +297,18 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 	color: black;
 }
 
-a:link, a:visited, a:active{
+#blocks{
 	opacity: 1;
 	text-decoration: none;
-	color: black;
+	color: #fff;
 	font-size: 86px;
+	font-style: normal;
+	padding: 22px 44PX;
+	border-radius: 30px;
+	box-shadow: 5px 5px 10px red;
 }
 
-a:hover{
+#blocks:hover{
 	opacity: 1;
 	text-decoration: none;
 	color: red;
@@ -454,10 +468,21 @@ img{
 
 .sixn{
 	display: block;
-	width: 100%;
-	height: auto;
 	box-shadow: 0 4px 8px 0 red;
+	top: 3300px;
+	left: 2380px;
+	z-index: 5;
+	animation: stick 5s infinite;
+}
 
+@keyframes stick{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+
+.sixn:hover{
+	cursor: pointer;
+	animation-play-state: paused;
 }
 
 .textimg{
