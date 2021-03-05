@@ -21,13 +21,16 @@ em{
 
 /* header */
 h1,h2,h3,h4,h5,h6{
-	background-color:black ;
+	background-color: black;
 	font-family: complex;
 }
 
-h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
+/*h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 	background-color: transparent; ; 
-}
+}*/
+
+
+
 
 
 
@@ -42,33 +45,39 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 /* center part*/
 .center{
 	position: relative;
-	margin-left: 1500px;
+	margin: auto;
 	max-width: 1200px;
 	height: 500px;
 	display:grid;
-	grid-template-columns: repeat(7, 20%);
+	grid-template-columns: repeat(7, 30%);
 	grid-template-rows: repeat(6, 70%);
 	transform: rotate(90deg);
 	top: 400px;
 	left: 1000px;
 }
 
-.center:hover{
+/*.center:hover{
 	transform: rotate(90deg);
-}
+}*/
 
 .one{
 	display: inline;
 	font-family: complex;
 	font-size: 86px;
+	color: #fff;
+	text-decoration: none;
 	background-color: #e97171;
-	padding: 20px;
-	border-radius: 55px;
-	box-shadow: 5px 5px 10px red;
+	padding: 22px 44px;
+	border-radius: 30px;
+	box-shadow: 5px 5px 20px #c7004c, 3px 3px 10px #ffaaaa;
 }
 
 .shiftOne{
 	position:absolute;
+}
+
+.shiftOne.active{
+	display: none;
 }
 
 .overlayImg{
@@ -179,10 +188,12 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 .shiftTwo{
 	z-index: 0;
 	display: inline;
-	grid-column-start: 5;
-	grid-column-end: 7;
+	grid-column-start: 3;
 	grid-row-start: 2;
-	grid-row-end: 8;
+}
+
+.shiftTwo.active{
+	display: none;
 }
 
 .two{
@@ -195,11 +206,15 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 	transition: .3s ease;
 }
 
+.two.active{
+	display: none;
+}
+
 .eyeclock{
 	position: absolute;
 	opacity: 0;
-	top: 164px;
-	left: 340px;
+	top: 195px;
+	left: 450px;
 	transition: .2s ease;
 }
 
@@ -222,13 +237,15 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 	z-index: 0;
 	display: inline;
 	grid-column-start: 5;
-	grid-column-end: 8;
 	grid-row-start: 3;
-	grid-row-end: 8;
 	font-family: complex;
 	font-size: 2.5em;
 	background-color: transparent;
 	color: transparent;
+}
+
+.three.active{
+	display: none;
 }
 
 .three:hover .showtext{
@@ -240,12 +257,14 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 	display: inline;
 	font-family: complex;
 	grid-column-start: 4;
-	grid-column-end: 8;
-	grid-row-start: 4;
-	grid-row-end: 8;
+	grid-row-start: 5;
 	font-size: 2.4em;
 	background-color: transparent;
 	color: transparent;
+}
+
+.four.active{
+	display: none;
 }
 
 .four:hover .showtext{
@@ -257,31 +276,17 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 	display: inline;
 	font-family: complex;
 	grid-column-start: 2;
-	grid-column-end: 6;
-	grid-row-start: 5;
-	grid-row-end: 8;
+	grid-row-start: 6;
 	font-size: 2.5em;
 	background-color: transparent;
 	color: transparent;
 }
 
+.five.active{
+	display: none;
+}
+
 .five:hover .showtext{
-	opacity: 1;
-}
-
-.six{
-	display: inline;
-	font-family: complex;
-	grid-column-start: 1;
-	grid-column-end: 3;
-	grid-row-start: 7;
-	grid-row-end: 7;
-	font-size: 3em;
-	background-color: transparent;
-	color: transparent;
-}
-
-.six:hover .showtext{
 	opacity: 1;
 }
 
@@ -290,6 +295,7 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 	margin-left: auto;
 	transition: .1s ease;
 	padding-top: 35px;
+	font-size: 2.3rem;
 }
 
 .one:hover, .two:hover, .three:hover, .four:hover, .five:hover{
@@ -305,15 +311,125 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 	font-style: normal;
 	padding: 22px 44PX;
 	border-radius: 30px;
-	box-shadow: 5px 5px 10px red;
+	box-shadow: 5px 5px 20px #c7004c, 3px 3px 10px #ffaaaa;
 }
 
-#blocks:hover{
-	opacity: 1;
-	text-decoration: none;
-	color: red;
+.shiftOne, .shiftTwo, .three, .four, .five{
+	display: none;
 }
 
+.pills{
+	background-color: #e97171;
+	border-radius: 20% 45% 45% 20%;
+	box-shadow: 5px 5px 20px #8f1537, inset 0px 0px 10px #940a37;
+	width: 480px;
+	height: 150px;
+	z-index: 1;
+}
+
+.pillsn{
+	border: 1px solid #fff;
+	border-radius: 20% 45% 45% 20%;
+	box-shadow: 0px 0px 20px #8f1537, inset 0px 0px 15px white;
+	width: 255px;
+	height: 105px;
+	z-index: 2;
+	background-color: #ffaaaa;
+}
+
+.fingers1{
+	grid-column: 1;
+	grid-row: 1;
+	margin: auto;
+}
+
+.fingers2{
+	grid-column: 3;
+	grid-row: 2;
+	margin: auto;
+}
+
+.fingers3{
+	grid-column: 5;
+	grid-row: 3;
+	margin: auto;
+}
+
+.fingers4{
+	grid-column: 4;
+	grid-row: 5;
+	margin: auto;
+}
+
+.fingers5{
+	grid-column: 2;
+	grid-row: 6;
+	margin: auto;
+}
+
+#p1{
+	grid-column: 1;
+	grid-row: 1;
+}
+
+#p2{
+	grid-column: 3;
+	grid-row: 2;
+	margin: auto;
+}
+
+#p3{
+	grid-column: 5;
+	grid-row: 3;
+	margin: auto;
+}
+
+#p4{
+	grid-column: 4;
+	grid-row: 5;
+	margin: auto;
+}
+
+#p5{
+	grid-column: 2;
+	grid-row: 6;
+	margin: auto;
+}
+
+#p1n{
+	grid-column: 1;
+	grid-row: 1;
+	margin-top: -131px;
+	margin-left: 230px;
+}
+
+#p2n{
+	grid-column: 3;
+	grid-row: 2;
+	margin-top: -131px;
+	margin-left: 230px;
+}
+
+#p3n{
+	grid-column: 5;
+	grid-row: 3;
+	margin-top: -131px;
+	margin-left: 230px;
+}
+
+#p4n{
+	grid-column: 4;
+	grid-row: 5;
+	margin-top: -131px;
+	margin-left: 230px;
+}
+
+#p5n{
+	grid-column: 2;
+	grid-row: 6;
+	margin-top: -131px;
+	margin-left: 230px;
+}
 
 
 
@@ -329,7 +445,8 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 /* left part */
 .left{
 	width: 0px;
-	height: 1000px;
+	height: 0px;
+	top: 1045px;
 	position: relative;
 	animation: move1 10s infinite;
 }
@@ -357,10 +474,9 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 /* right part */
 .right{
 	position: relative;
-	margin-left: auto;
-	margin-top: auto;
+	top: 1080px;
 	width: 2px;
-	height: 1000px;
+	height: 0px;
 	animation: move2 10s infinite;
 }
 
@@ -387,6 +503,18 @@ h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, em:hover {
 
 
 /* bottom part */
+
+.number{
+	position: fixed;
+	top: 0px;
+	width: 100vw;
+	transition: .5s ease;
+}
+
+.number:hover{
+	transform: scale(50);
+}
+
 img{
 	position: absolute;
 	display: block;
@@ -468,6 +596,9 @@ img{
 
 .sixn{
 	display: block;
+	width: 10px; 
+	height: 500px; 
+	transform: rotate(10deg);
 	box-shadow: 0 4px 8px 0 red;
 	top: 3300px;
 	left: 2380px;
@@ -601,4 +732,24 @@ img{
 	75%{transform: rotate(-90deg);}
 	100%{transform: rotate(0deg);}
 
+
+
+.six{
+	display: inline;
+	font-family: complex;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 7;
+	font-size: 3em;
+	background-color: transparent;
+	color: transparent;
+}
+
+.six.active{
+	display: none;
+}
+
+.six:hover .showtext{
+	opacity: 1;
+}
 */

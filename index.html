@@ -4,12 +4,18 @@
 		<title>weird time</title>
 		<link rel="stylesheet" href="index.css">
 		<link rel="stylesheet" href="drawing 1.css">
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<script src="index.js"></script>
 
 	</head>
 
 	<body>
 		<div class="center">
 
+		<div class="fingers1">
+			<div class="pills" id="p1"></div>
+			<div class="pillsn" id="p1n"></div>
+		</div>
 		<div class="shiftOne">
 		<h1 class="one"> 
 				measured
@@ -49,6 +55,10 @@
 		</div>
 		</div>
 
+		<div class="fingers2">
+			<div class="pills" id="p2"></div>
+			<div class="pillsn" id="p2n"></div>
+		</div>
 		<div class="shiftTwo">		
 			<h2 class="two"> 
 					<em id="blocks">clock</em>
@@ -68,30 +78,44 @@
 			</div>
 		</div>
 
+		<div class="fingers3">
+			<div class="pills" id="p3"></div>
+			<div class="pillsn" id="p3n"></div>
+		</div>
 		<h3 class="three">
 				<em id="blocks">occasion</em>
 				<div class="showtext">
 				an oaccasion when something happens or someone does something
 				</div>
 		</h3>
+
+		<div class="fingers4">
+			<div class="pills" id="p4"></div>
+			<div class="pillsn" id="p4n"></div>
+		</div>
 		<h4 class="four"> 
 				<em id="blocks">happens</em></a>
 				<div class="showtext">
 				the particular minute, hour, day etc when something or should happen
 				</div>
 		</h4>
+
+		<div class="fingers5">
+			<div class="pills" id="p5"></div>
+			<div class="pillsn" id="p5n"></div>
+		</div>
 		<h5 class="five"> 
 				<em id="blocks">period</em>
 				<div class="showtext">
 				a period of time during which something happens or someone does something
 				</div>
 		</h5>
-		<h6 class="six">
+		<!--<h6 class="six">
 				<em id="blocks">available</em>
 				<div class="showtext">
 				an amount of time that is available for you to do something
 				</div>
-		</h6>
+		</h6>-->
 		</div>
 
 		<div class="left">
@@ -133,27 +157,28 @@
 		<h5 id="smaller">
 				a <em>period</em> of time during which something happens or someone does something
 		</h5>
+
 		<h6 id="smaller">
 				an amount of time that is <em>available</em> for you to do something
 		</h6>
 		</div>
 
 		<div class="number">
-			<img alt="3" src="pic/3.png" style="right: 50%; top: 50%; width: 10px; height: 100px; transform: rotate(-20deg)" class="n3">
-			<img alt="8" src="pic/8.png" style="right: 50%; top: 55%;width: 10px; height: 100px; transform: rotate(20deg)" class="n8">
-			<img alt="5" src="pic/5.png" style="right: 49%; top: 60%; width: 50px; height: 100px; transform: rotate(-45deg)" class="n5">
-			<img alt="12" src="pic/12.png" style="right: 50%; top: 65%; width: 10px; height: 70px; transform: rotate(20deg)" class="n12">
-			<img alt="4" src="pic/4.png" style="right: 49%; top: 72%; width: 100px; height: 10px; transform: rotate(250deg)" class="n4">
-			<img alt="7" src="pic/7.png" style="right: 50%; top: 75%; width: 10px; height: 100px; transform: rotate(60deg)" class="n7">
-			<img alt="10" src="pic/10.png" style="right: 50%; top: 80%; width: 10px; height: 100px; transform: rotate(-20deg)" class="n10">
-			<img alt="1" src="pic/1.png" style="right: 50%; top: 85%; width: 10px; height: 10px; transform: rotate(120deg)" class="n1">
-			<img alt="6" src="pic/6.png" style="right: 50%; top: 80%; width: 10px; height: 100px; transform: rotate(-250deg)" class="n6">
-			<img alt="9" src="pic/9.png" style="right: 50%; top: 85%; width: 100px; height: 100px; transform: rotate(-120deg)" class="n9">
-			<img alt="2" src="pic/2.png" style="right: 50%; top: 90%; width: 10px; height: 150px; transform: rotate(120deg)" class="n2">
+			<img alt="3" src="pic/3.png" style="right: 50%; top: 0%; width: 10px; height: 100px; transform: rotate(-20deg)" class="n3">
+			<img alt="8" src="pic/8.png" style="right: 50%; top: 0%;width: 10px; height: 100px; transform: rotate(20deg)" class="n8">
+			<img alt="5" src="pic/5.png" style="right: 49%; top: 0%; width: 50px; height: 100px; transform: rotate(-45deg)" class="n5">
+			<img alt="12" src="pic/12.png" style="right: 50%; top: 0%; width: 10px; height: 70px; transform: rotate(20deg)" class="n12">
+			<img alt="4" src="pic/4.png" style="right: 49%; top: 0%; width: 100px; height: 10px; transform: rotate(250deg)" class="n4">
+			<img alt="7" src="pic/7.png" style="right: 50%; top: 0%; width: 10px; height: 100px; transform: rotate(60deg)" class="n7">
+			<img alt="10" src="pic/10.png" style="right: 50%; top: 0%; width: 10px; height: 100px; transform: rotate(-20deg)" class="n10">
+			<img alt="1" src="pic/1.png" style="right: 50%; top: 0%; width: 10px; height: 10px; transform: rotate(120deg)" class="n1">
+			<img alt="6" src="pic/6.png" style="right: 50%; top: 0%; width: 10px; height: 100px; transform: rotate(-250deg)" class="n6">
+			<img alt="9" src="pic/9.png" style="right: 50%; top: 0%; width: 100px; height: 100px; transform: rotate(-120deg)" class="n9">
+			<img alt="2" src="pic/2.png" style="right: 50%; top: 0%; width: 10px; height: 150px; transform: rotate(120deg)" class="n2">
 		</div>
 
 		<div class="container">
-			<a href="dream/index.html"><img alt="11" src="pic/11.png" style="width: 10px; height: 500px; transform: rotate(10deg);" class="sixn"></a>
+			<a href="dream/index.html"><img alt="11" src="pic/11.png" class="sixn"></a>
 			<div class="overlay">
 			    <img src="pic/bg.png" alt="bg" class="textimg">
 			</div>
