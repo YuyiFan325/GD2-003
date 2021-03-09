@@ -4,7 +4,6 @@ html{
 *{
     margin: 0;
     padding: 0;
-    min-height: 100%;
 }
 
 .containers{
@@ -4066,4 +4065,62 @@ html{
     transition-delay: 6.9s;
     opacity: 30%;
     z-index: -2;
+}
+
+
+
+
+
+
+.door{
+    position: absolute;
+    width: 130px;
+    height: 52px;
+    background-color: #ffaaaa;
+    top: 30px;
+    left: -128px;
+    font-family: complex;
+    font-size: 36px;
+    font-weight: bolder;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10% 10% 10% 0%;
+    box-shadow: inset 0px 0px 6px #c7004c, 0px 0px 10px #e37070;
+    text-shadow: 0px 0px 5px #e37070;
+    transition: .3s ease-out;
+    z-index: 3;
+}
+
+.door2{
+    position: absolute;
+    width: 210px;
+    height: 52px;
+    background-color: #ffaaaa;
+    top: -45px;
+    left: 30px;
+    font-family: complex;
+    font-size: 36px;
+    font-weight: bolder;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 0% 0% 10% 10%;
+    box-shadow: inset 0px 0px 6px #c7004c, 0px 0px 10px #e37070;
+    text-shadow: 0px 0px 5px #e37070;
+    transition: .3s ease-out;
+    z-index: 3;
+}
+
+.door:hover{
+    left: 0px;
+}
+
+.door2:hover{
+    top: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
 }

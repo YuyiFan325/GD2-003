@@ -2,26 +2,76 @@ $(function() {
 
   $(window).scroll(function() {
 
-    var massY = Math.min(20, 0.5+0.0005*$(this).scrollTop());
+    var massY = Math.min(20, 0.20+0.0004*$(this).scrollTop());
 
-    $('.BGI').css('transform', 'scaleY(' + massY*2 + ')');
+    $('.BGI').css('transform', 'scaleY(' + massY*5 + ')');
   });
 });
 
 
 $(document).ready(function(){
-	$("span").click(function(){
-		$("span"). toggleClass("active");
+	$(".num").click(function(){
+		$(".num"). toggleClass("active");
+	});
+});
+
+
+$(document).ready(function(){
+	$(".door").click(function(){
+		$(".door"). toggleClass("active"),
+		$(".door2"). toggleClass("active");
+	});
+});
+
+$(document).ready(function(){
+	$(".door2").mouseenter(function(){
+		$(".out"). addClass("active"),
+		$(".in"). addClass("active"),
+		$(".line2"). addClass("active");
+	});
+
+	$(".line2").click(function(){
+		$(".out"). removeClass("active"),
+		$(".in"). removeClass("active"),
+		$(".line2"). removeClass("active");
+	});
+});
+
+$(document).ready(function(){
+	$(".out").mouseenter(function(){
+		$(".out"). animate({color: "#ffaaaa"}, "slow");
+	});
+});
+
+
+
+
+
+
+/*
+$(document).ready(function(){
+	$(".door").click(function(){
+		$(".left"). animate({opacity: "0"}, "slow");
+	});
+});
+
+$(document).ready(function(){
+	$(".leftT").mouseenter(function(){
+		$(".leftT"). animate({left: "-50px"}, "slow");
 	});
 });
 
 $(document).ready(function(){
 	$(".door").click(function(){
-		$(".door2"). show("active");
+		$(".door2"). animate({top: "-340px"}, "slow");
 	});
 });
 
-
+$(document).ready(function(){
+	$(".door").click(function(){
+		$(".door2"). animate({opacity: "1"}, "slow");
+	});
+});
 
 
 /*
